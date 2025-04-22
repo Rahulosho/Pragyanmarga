@@ -78,12 +78,15 @@
 }
 
 /*** Navbar ***/
-
-
 .nav-icon {
-    height: 8rem;
-
+    height: 4rem;   /* Adjust height to fit nicely */
+    width: auto;    /* Maintain aspect ratio */
+    margin-top: 0;  /* Optional: remove excess top margin */
+    object-fit: contain;
+    margin-bottom: 20px;
 }
+
+
 .navbar .dropdown-toggle::after {
     border: none;
     content: "\f107";
@@ -690,3 +693,131 @@
   .card-text {
     flex-grow: 1;
   }
+
+  /* bg beige color */
+  .beige-color {
+
+    background-color: #e6e6e6;
+  }
+
+
+
+
+
+  /* timeline section start  */
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-left: 100px;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: -30px;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: #f7a072;
+    z-index: 0;
+  }
+
+  .checkpoint {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    position: relative;
+  }
+
+  .checkpoint::before {
+    content: '';
+    position: absolute;
+    left: -38px;
+    top: 8px;
+    width: 16px;
+    height: 16px;
+    background: #fff;
+    border: 4px solid #f7a072;
+    border-radius: 50%;
+    z-index: 1;
+  }
+
+  .checkpoint-year {
+    min-width: 150px;
+    text-align: right;
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: #1d1327;
+  }
+
+  .checkpoint-content {
+    background: #fdfaf6;
+    padding: 1.5rem 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    flex-grow: 1;
+    max-width: 700px;
+  }
+
+  .icon {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  @media (max-width: 768px) {
+    .checkpoint {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .checkpoint-year {
+      text-align: left;
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  /* timeline section end */
+
+
+
+  /* about page section heading start  */
+  .highlight {
+    position: relative;
+    display: inline-block;
+  }
+
+  .highlight::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0.1em;
+    width: 100%;
+    height: 0.25em;
+    background-color: #F7A072; /* aqua underline */
+    z-index: -1;
+    transform: rotate(-2deg);
+  }
+
+  .about-img {
+    width: 100%;
+    border-radius: 2rem;
+    object-fit: cover;
+  }
+
+  .about-section {
+    padding: 4rem 0;
+  }
+
+  @media (max-width: 768px) {
+    .about-section {
+      text-align: center;
+    }
+
+    .highlight::after {
+      height: 0.2em;
+    }
+  }
+  /* about page section heading end */

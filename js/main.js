@@ -99,3 +99,6 @@
     
 })(jQuery);
 
+
+
+// for video testimonial animation
