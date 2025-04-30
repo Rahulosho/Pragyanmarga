@@ -821,3 +821,153 @@
     }
   }
   /* about page section heading end */
+
+
+  /* mission and values card start */
+  .mission-section {
+    padding: 60px 15px;
+  }
+  .mission-heading {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  .mission-text {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 40px;
+    font-size: 1.1rem;
+    color: #666;
+  }
+  .value-card {
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .value-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  }
+  .value-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+    color: #B8895E;
+  }
+  .value-title {
+    font-weight: 600;
+    font-size: 1.3rem;
+  }
+  .value-description {
+    font-size: 0.95rem;
+    margin-top: 10px;
+  }
+  @media (max-width: 767.98px) {
+    .value-card {
+      margin-bottom: 20px;
+    }
+  }
+
+  /* mission and values card end */
+ 
+  
+
+
+  /* service header start */
+  .custom-image-grid {
+    display: flex;
+    align-items: center;
+  }
+  
+  .big-img img {
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 1.5rem;
+  }
+  
+  .small-imgs img {
+    width: 140px;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 1.5rem;
+  }
+  
+  @media (max-width: 768px) {
+    .custom-image-grid {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .big-img img,
+    .small-imgs img {
+      width: 100%;
+      height: auto;
+    }
+  
+    .small-imgs {
+      flex-direction: row;
+      gap: 1rem;
+    }
+  }  
+
+/* custom testimonial  */
+.yt-testimonial-card {
+    background: #ffffff;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease;
+  }
+
+  .yt-testimonial-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .yt-testimonial-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #ff914d;
+  }
+
+  .yt-testimonial-name {
+    font-weight: bold;
+    margin-top: 15px;
+    color: #333;
+  }
+
+  .yt-testimonial-profession {
+    color: #888;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+  }
+
+  .yt-testimonial-text {
+    font-style: italic;
+    color: #555;
+  }
+
+  .yt-testimonial-section {
+    background-color: #f9f7f5;
+    padding: 60px 0;
+  }
+
+
+  /* for line section start */
+  .text-highlight {
+    color: #B58559; /* Elegant warm brown shade */
+  }
+  .custom-underline {
+    width: 60px;
+    height: 4px;
+    background-color: #8c684a;
+    border-radius: 2px;
+  }
+  /* for line section end  */
