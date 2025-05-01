@@ -971,3 +971,46 @@
     border-radius: 2px;
   }
   /* for line section end  */
+
+  /* bounce animation start */
+  .bounce-arrow {
+    animation: bounce 1.5s infinite;
+  }
+
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(10px); }
+  }
+  /* bounce animation end */
+
+  /* testimonial page cards of wall start */
+  .review-wall {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    max-height: 600px;
+    overflow-y: auto;
+    padding-right: 0.5rem;
+    scroll-behavior: smooth;
+  }
+  
+  .review-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .review-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  }
+  
+  @media (max-width: 768px) {
+    .review-wall {
+      max-height: none;
+      overflow: visible;
+    }
+  }
+  /* testimonial page cards of wall end */
