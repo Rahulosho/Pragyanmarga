@@ -705,121 +705,131 @@
 
 
   /* timeline section start  */
-  .timeline {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    margin-left: 100px;
+.split-timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem 0;
+}
+
+.split-timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 4px;
+  background: #dee2e6;
+  transform: translateX(-50%);
+}
+
+.split-checkpoint {
+  position: relative;
+  width: 50%;
+  padding: 1rem 2rem;
+  box-sizing: border-box;
+}
+
+.split-checkpoint.left {
+  left: 0;
+  text-align: right;
+}
+
+.split-checkpoint.right {
+  left: 50%;
+  text-align: left;
+}
+
+.split-checkpoint .content {
+  background: #fff5ea;
+  padding: 1rem;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+.split-checkpoint.left .content {
+  margin-right: 30px;
+}
+
+.split-checkpoint.right .content {
+  margin-left: 30px;
+}
+
+.split-checkpoint .icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #0d6efd;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  .split-checkpoint,
+  .split-checkpoint.left,
+  .split-checkpoint.right {
+    left: 0 !important;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 2rem;
   }
 
-  .timeline::before {
-    content: '';
-    position: absolute;
-    left: -30px;
-    top: 0;
-    bottom: 0;
-    width: 4px;
-    background: #f7a072;
-    z-index: 0;
+  .split-checkpoint .content {
+    margin: 0 auto;
   }
 
-  .checkpoint {
-    display: flex;
-    align-items: flex-start;
-    gap: 2rem;
-    margin-bottom: 3rem;
-    position: relative;
+  .split-timeline::before {
+    left: 20px;
   }
-
-  .checkpoint::before {
-    content: '';
-    position: absolute;
-    left: -38px;
-    top: 8px;
-    width: 16px;
-    height: 16px;
-    background: #fff;
-    border: 4px solid #f7a072;
-    border-radius: 50%;
-    z-index: 1;
-  }
-
-  .checkpoint-year {
-    min-width: 150px;
-    text-align: right;
-    font-size: 1.75rem;
-    font-weight: bold;
-    color: #1d1327;
-  }
-
-  .checkpoint-content {
-    background: #fdfaf6;
-    padding: 1.5rem 2rem;
-    border-radius: 1rem;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    flex-grow: 1;
-    max-width: 700px;
-  }
-
-  .icon {
-    font-size: 2rem;
-    display: block;
-    margin-bottom: 0.5rem;
-  }
-
-  @media (max-width: 768px) {
-    .checkpoint {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-
-    .checkpoint-year {
-      text-align: left;
-      margin-bottom: 0.5rem;
-    }
-  }
+}
 
   /* timeline section end */
 
 
 
   /* about page section heading start  */
-  .highlight {
-    position: relative;
-    display: inline-block;
+.highlight {
+  position: relative;
+  display: inline-block;
+}
+
+.highlight::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0.1em;
+  width: 100%;
+  height: 0.25em;
+  background-color: #F7A072;
+  z-index: -1;
+  transform: rotate(-2deg);
+}
+
+.about-img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 2rem;
+  object-fit: cover;
+}
+
+.about-section {
+  padding: 4rem 0;
+}
+
+@media (max-width: 768px) {
+  .about-section {
+    text-align: center;
+    padding: 2rem 1rem;
   }
 
   .highlight::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0.1em;
-    width: 100%;
-    height: 0.25em;
-    background-color: #F7A072; /* aqua underline */
-    z-index: -1;
-    transform: rotate(-2deg);
+    height: 0.2em;
   }
 
-  .about-img {
-    width: 100%;
-    border-radius: 2rem;
-    object-fit: cover;
+  .display-4 {
+    font-size: 2rem;
   }
-
-  .about-section {
-    padding: 4rem 0;
-  }
-
-  @media (max-width: 768px) {
-    .about-section {
-      text-align: center;
-    }
-
-    .highlight::after {
-      height: 0.2em;
-    }
-  }
+}
   /* about page section heading end */
 
 
