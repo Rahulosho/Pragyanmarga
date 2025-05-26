@@ -1024,3 +1024,22 @@
     }
   }
   /* testimonial page cards of wall end */
+
+  /* contact page start */
+  /* contact.css */
+
+.contact-section {
+  background-image: url(../img/form-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+
+@media (max-width: 767.98px) {
+  .contact-info-box {
+    border-radius: 0 0 0.5rem 0.5rem;
+  }
+}
+
+  
+  /* contact page end */
