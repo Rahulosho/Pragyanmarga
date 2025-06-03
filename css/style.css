@@ -1132,7 +1132,7 @@
   }
 
   .custom-testimonial-card video {
-    height: 320px;
+    height: 420px;
   }
 }
 
@@ -1195,3 +1195,15 @@
   }
 }
 /* social links on contact page end */
+
+.whatsapp-contact {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
