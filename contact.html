@@ -122,93 +122,111 @@
 
     
     <section class="contact-section d-flex align-items-center min-vh-100">
-  <div class="container py-5">
-    <div class="row g-4 flex-md-row-reverse align-items-stretch shadow-lg rounded overflow-hidden">
+    <div class="container py-5">
+        <div class="row g-4 flex-md-row-reverse align-items-stretch shadow-lg rounded overflow-hidden">
 
-      <!-- Right: Form -->
-      <div class="col-lg-8 bg-white p-4 order-1 order-md-2">
-        <h2 class="mb-4">Start Your Journey</h2>
-        <form action="https://api.staticforms.xyz/submit" method="POST">
-          <!-- StaticForms Integration -->
-          <input type="hidden" name="apiKey" value="sf_igaah80k3mbf30k8g4jae16c">
-          <input type="hidden" name="replyTo" value="@">
-          <input type="hidden" name="redirectTo" value="https://yourdomain.com/success">
-          <input type="text" name="honeypot" style="display:none" tabindex="-1" autocomplete="off">
+            <!-- Right: Form -->
+            <div class="col-lg-8 bg-white p-4 order-1 order-md-2">
+                <h2 class="mb-4">Start Your Journey</h2>
 
-          <div class="row mb-3">
-            <div class="col-md-6 mb-3 mb-md-0">
-              <input type="text" class="form-control" name="firstName" placeholder="First name *" required>
+                <!-- ✅ Form with StaticForms integration -->
+                <form id="contact-form" action="https://api.staticforms.xyz/submit" method="POST" target="hidden_iframe"
+                    onsubmit="showThankYou(); return true;">
+                    <input type="hidden" name="apiKey" value="sf_igaah80k3mbf30k8g4jae16c">
+                    <input type="hidden" name="replyTo" value="@">
+                    <input type="hidden" name="honeypot" style="display:none" tabindex="-1" autocomplete="off">
+                    <input type="hidden" name="redirectTo" value="">
+
+                    <div class="row mb-3">
+                        <div class="col-md-6 mb-3 mb-md-0">
+                            <input type="text" class="form-control" name="firstName" placeholder="First name *"
+                                required>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" name="lastName" placeholder="Last name">
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <input type="email" class="form-control" name="email" placeholder="Email *" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <input type="tel" class="form-control" name="phone" placeholder="1234 567 890 *" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <select class="form-select" name="$service" required>
+                            <option selected disabled value="">Select a service *</option>
+                            <option>Personal Consultation</option>
+                            <option>Personal Healing</option>
+                            <option>Manifestation Mastery</option>
+                            <option>Zen at Work</option>
+                            <option>Meditation Mastery</option>
+                            <option>Retreats & Workshops</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <textarea rows="4" class="form-control" name="message" placeholder="Your message"></textarea>
+                    </div>
+
+                    <!-- Optional: Google reCAPTCHA -->
+                    <!-- <div class="g-recaptcha mb-3" data-sitekey="YOUR_SITE_KEY_HERE"></div>
+                    <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
+
+                    <button type="submit" class="btn btn-success px-4">Send message</button>
+                </form>
+
+                <!-- Hidden iframe to prevent redirect -->
+                <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+
+                <!-- ✅ Thank You Popup -->
+                <div id="thankYouModal" class="modal"
+                    style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,0.6); z-index:9999; align-items:center; justify-content:center;">
+                    <div
+                        style="background:#fff; padding:30px; border-radius:8px; text-align:center; max-width:400px; margin:auto;">
+                        <h4>Thank you!</h4>
+                        <p>Your message has been sent successfully.</p>
+                        <button class="btn btn-success mt-3"
+                            onclick="document.getElementById('thankYouModal').style.display='none'">Close</button>
+                    </div>
+                </div>
+
+                <!-- JS to show thank-you popup -->
+
             </div>
-            <div class="col-md-6">
-              <input type="text" class="form-control" name="lastName" placeholder="Last name">
+
+            <!-- Left: Contact Info -->
+            <div class="col-lg-4 text-white p-4 contact-info-box order-2 bg-primary order-md-1">
+                <h5 class="mb-3 text-white">Contact information</h5>
+                <p>If you have any questions, feel free to get in touch with us.</p>
+
+                <div class="mb-2">
+                    <i class="fab fa-whatsapp text-white me-2"></i>
+                    <a href="https://wa.me/918484811858" class="text-decoration-none text-white"
+                        target="_blank">+91-8484811858</a>
+                </div>
+                <div class="mb-2">
+                    <i class="fas fa-envelope me-2"></i>
+                    <a href="mailto:Pragyanmarg@gmail.com"
+                        class="text-decoration-none text-white">Pragyanmarg@gmail.com</a>
+                </div>
+                <div class="mb-2"><i class="fas fa-clock me-2"></i> Mon–Fri: 9:00 AM – 6:00 PM</div>
+                <div class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> Rishikesh- Tapovan, Delhi- Dwarka, and
+                    Pune- Manjri Bk</div>
+
+                <div class="mt-4">
+                    <a href="#" class="text-white me-3 fs-5"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-white me-3 fs-5"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/pragyanmarg" class="text-white fs-5"><i
+                            class="fab fa-instagram"></i></a>
+                </div>
             </div>
-          </div>
 
-          <div class="mb-3">
-            <input type="email" class="form-control" name="email" placeholder="Email *" required>
-          </div>
-
-          <div class="mb-3">
-            <input type="tel" class="form-control" name="phone" placeholder="1234 567 890 *" required>
-          </div>
-
-          <!-- ✅ Services Dropdown -->
-          <div class="mb-3">
-            <select class="form-select" name="$service" required>
-              <option selected disabled value="">Select a service *</option>
-              <option>Personal Consultation</option>
-              <option>Personal Healing</option>
-              <option>Manifestation Mastery</option>
-              <option>Zen at Work</option>
-              <option>Meditation Mastery</option>
-              <option>Retreats & Workshops</option>
-            </select>
-          </div>
-
-          <div class="mb-3">
-            <textarea rows="4" class="form-control" name="message" placeholder="Your message"></textarea>
-          </div>
-
-          <!-- Optional: Google reCAPTCHA -->
-          <div class="g-recaptcha mb-3" data-sitekey="YOUR_SITE_KEY_HERE"></div>
-          <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
-          <button type="submit" class="btn btn-success px-4">Send message</button>
-        </form>
-      </div>
-
-      <!-- Left: Contact Info -->
-      <div class="col-lg-4 text-white p-4 contact-info-box order-2 bg-primary order-md-1">
-        <h5 class="mb-3 text-white">Contact information</h5>
-        <p>If you have any questions, feel free to get in touch with us.</p>
-
-        <div class="mb-2">
-          <i class="fab fa-whatsapp text-white me-2"></i>
-          <a href="https://wa.me/918484811858" class="text-decoration-none text-white" target="_blank">
-            +91-8484811858
-          </a>
         </div>
-        <div class="mb-2">
-          <i class="fas fa-envelope me-2"></i>
-          <a href="mailto:Pragyanmarg@gmail.com" class="text-decoration-none text-white">
-            Pragyanmarg@gmail.com
-          </a>
-        </div>
-        <div class="mb-2"><i class="fas fa-clock me-2"></i> Mon–Fri: 9:00 AM – 6:00 PM</div>
-
-        <div class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> Rishikesh- Tapovan, Delhi- Dwarka, and Pune- Manjri Bk</div>
-
-        <div class="mt-4">
-          <a href="#" class="text-white me-3 fs-5"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" class="text-white me-3 fs-5"><i class="fab fa-linkedin-in"></i></a>
-          <a href="https://www.instagram.com/pragyanmarg" class="text-white fs-5"><i class="fab fa-instagram"></i></a>
-        </div>
-      </div>
-
     </div>
-  </div>
     </section>
-
 
     <!-- Contact End -->
 
@@ -294,7 +312,7 @@
    class="btn btn-lg btn-success btn-lg-square rounded-circle whatsapp-contact" 
    title="Chat on WhatsApp">
    <i class="bi bi-whatsapp"></i>
-</a>
+   </a>
 
 
     <!-- JavaScript Libraries -->
@@ -308,6 +326,16 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script>
+          function showThankYou() {
+            setTimeout(function () {
+              document.getElementById('thankYouModal').style.display = 'flex';
+              document.getElementById('contact-form').reset();
+              grecaptcha.reset(); // resets reCAPTCHA if used
+            }, 1500); // delay to allow StaticForms to submit
+          }
+    </script>
+
 </body>
 
 </html>
